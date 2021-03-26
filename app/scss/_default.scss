@@ -1,0 +1,26 @@
+// colors
+$Primary: #18A0FB;
+$Second: #B5995A;
+$Default: #000000;
+$Text: #FFFFFF;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+$font: 'Montserrat', sans-serif;
+
+// width
+$container: 1230px;
+$max-width: 1446px;
+
+.container {
+    max-width: $container;
+    padding: 0px 6px;
+    margin: 0 auto;
+}
+
+html, body, * {
+    font-size: 16px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+}
