@@ -77,6 +77,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
 }
 .item-1 {
     background-image: url(../images/item-1.png);
@@ -161,15 +162,170 @@
 .section-title {
     margin-top: 100px;
     margin-bottom: 90px;
-
 }
 
+.quote {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    &::before {
+        content: '”';
+        color: $Second;
+        font-size: 288px;
+        font-weight: normal;
+        position: absolute;
+        top: 40%;
+        left: 0; 
+    }
+    &::after {
+        content: '”';
+        color: $Second;
+        font-size: 288px;
+        font-weight: normal;
+        position: absolute;
+        top: 40%;
+        right: 0; 
+    }
+}
 
+.section__quote {
+    padding: 200px 0;
+    position: relative;
+}
 
+.pages-link {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 72px;
+    color: $Default;
+    transition: all 0.2s;
+    &:hover {
+        color: $Second;
+    }
+}
+.section__album {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-bottom: 60px;
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+.album-image-1 {
+    width: 70%;
+    height: 400px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/album-img-1.png);
+}
+.album-image-2 {
+    width: 70%;
+    height: 400px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/album-img-2.png);
+}
+.album-title {
+    margin-bottom: 110px;
+}
 
+.album-text {
+    font-size: 24px;
+    line-height: 50px;
+}
 
+// footer
+.footer {
+    width: 100%;
+    background: $Second;
+    color: $Text;
+    &__container {
+        padding: 80px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 42px;
+        .address {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 42px;
+        }
+        a {
+            color: $Text;
+            transition: all 0.2s;
+            &:hover {
+                color: $Default;
+            }
+        }
+    }
+}
 
-
+.footer__menu {
+    display: flex;
+    flex-wrap: wrap;
+    .footer__list {
+        width: 50%;
+        &-link {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 70px;
+            color: $Text;
+            transition: all 0.2s;
+            &:hover {
+                color: $Default;
+            }
+        }
+    }
+}
+.autor__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    .autor__info {
+        display: flex;
+        flex-direction: column;
+    }
+    .autor-name {
+        color: $Text;
+        line-height: 24px;
+        transition: all 0.2s;
+        &:hover {
+            color: $Default;
+        }
+    }
+    .logo-name {
+        color: $Text;
+        line-height: 24px;
+        transition: all 0.2s;
+        &:hover {
+            color: $Default;
+        }
+        &:before {
+            content: '® ';
+            color: $Text;
+        }
+        &::before:hover {
+            color: $Default;
+        }
+    }
+}
 
 //////////////
 
